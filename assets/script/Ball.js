@@ -17,13 +17,19 @@ cc.Class({
         emitSpeed: 0,
         gravity: 0,
         scale: 0,
-        startPosition: cc.Vec2
     },
 
     init: function(game){
         this.game = game;
-        this.reset();
         this.registerInput();
+
+        this.showAnim();
+    },
+
+    showAnim: function(){
+        this.node.opacity = 0;
+        var fade = cc.fadeIn(0.3);
+        this.node.runAction(fade);    
     },
 
     registerInput: function(){
@@ -38,13 +44,12 @@ cc.Class({
             }.bind(this),
 
             onTouchEnded: function (touch, event) {
-
                 this.status = TouchStatus.ENDED;
                 this.enableInput(false);
                 this.currentVerSpeed = this.emitSpeed;
                 this.target =  this.node.convertToNodeSpaceAR(touch.getLocation());
                 cc.log('touch x='+this.target.x+', y='+this.target.y);
-                this.currentHorSpeed = this.target.x;
+                this.currentHorSpeed = this.target.x * 1.2;
 
                 this.doAnim();
             }.bind(this),
@@ -72,6 +77,10 @@ cc.Class({
         this.node.runAction(anim);
     },
 
+    getNode: function(){
+        return this.node;
+    },
+
     update: function (dt) {
         if(this.status != TouchStatus.ENDED){
             return;
@@ -87,9 +96,11 @@ cc.Class({
         this.changeBallStatus(this.currentVerSpeed);
         this.node.y += dt * this.currentVerSpeed;
 
-        if(this.ballStatus === BallStatus.DOWN && this.node.y < 0){
+        if(this.ballStatus === BallStatus.DOWN && this.node.y < -800){
             this.node.stopAllActions();
-            this.reset();
+            this.node.removeFromParent();
+            cc.pool.putInPool(this);
+            this.game.newBall();
             return;
         }
     },
@@ -98,18 +109,17 @@ cc.Class({
     changeBallStatus: function(speed){
         if(speed === 0){
             this.ballStatus = BallStatus.NONE;
-            this.game.switchCollision(false);
         } else if(speed > 0) {
             this.ballStatus = BallStatus.FLY;
-            this.game.switchCollision(false);
         } else {
             this.ballStatus = BallStatus.DOWN;
-            this.game.switchCollision(true);
         }
     },
 
     onCollisionEnter: function (other, self) {
-        console.log('发生了碰撞' + other);
+        if(this.ballStatus === BallStatus.FLY){
+            return;
+        }
 
         var box = other.node.getComponent('CollisionBox');;
         var left = box.getLeft();
@@ -140,7 +150,5 @@ cc.Class({
         var r = world.radius;
         var p = world.position;
     },
-
-    reset: function(){
-    },
+ 
 });

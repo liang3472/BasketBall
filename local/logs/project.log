@@ -1,164 +1,94 @@
-2016-06-24T02:09:47.441Z - normal: Load ~/.CocosCreator/settings.json
-2016-06-24T02:09:47.446Z - normal: checking language setting...
-2016-06-24T02:09:47.446Z - normal: Language: zh
-2016-06-24T02:09:47.474Z - success: protocol editor-framework registerred
-2016-06-24T02:09:47.474Z - success: protocol app registerred
-2016-06-24T02:09:47.474Z - success: protocol packages registerred
-2016-06-24T02:09:47.475Z - success: protocol unpack registerred
-2016-06-24T02:09:47.547Z - normal: connected!
-2016-06-24T02:09:47.549Z - normal: Check project /Users/lianghangbing/CocosJsProj/BasketBall
-2016-06-24T02:09:47.552Z - normal: Initializing Cocos Creator Editor
-2016-06-24T02:09:47.781Z - normal: Initializing Cocos2d
-2016-06-24T02:09:47.910Z - normal: Initializing Asset Database
-2016-06-24T02:09:47.930Z - success: protocol uuid registerred
-2016-06-24T02:09:47.930Z - success: protocol uuid registerred
-2016-06-24T02:09:47.930Z - success: protocol thumbnail registerred
-2016-06-24T02:09:47.930Z - normal: Loading editor/builtin packages
-2016-06-24T02:09:48.083Z - success: assets loaded
-2016-06-24T02:09:48.094Z - success: builder loaded
-2016-06-24T02:09:48.157Z - success: hierarchy loaded
-2016-06-24T02:09:48.165Z - success: inspector loaded
-2016-06-24T02:09:48.168Z - success: keystore loaded
-2016-06-24T02:09:48.222Z - success: node-library loaded
-2016-06-24T02:09:48.234Z - success: preferences loaded
-2016-06-24T02:09:48.279Z - success: project-importer loaded
-2016-06-24T02:09:48.300Z - success: project-settings loaded
-2016-06-24T02:09:48.307Z - success: ui-kit loaded
-2016-06-24T02:09:48.375Z - success: ui-grid loaded
-2016-06-24T02:09:48.391Z - success: scene loaded
-2016-06-24T02:09:48.393Z - success: sprite-editor loaded
-2016-06-24T02:09:48.403Z - success: timeline loaded
-2016-06-24T02:09:48.406Z - success: ui-kit-extra loaded
-2016-06-24T02:09:48.406Z - normal: Loading builtin packages
-2016-06-24T02:09:48.418Z - success: asset-db-debugger loaded
-2016-06-24T02:09:48.422Z - success: code-editor loaded
-2016-06-24T02:09:48.423Z - success: color-picker loaded
-2016-06-24T02:09:48.449Z - success: console loaded
-2016-06-24T02:09:48.453Z - success: package-manager loaded
-2016-06-24T02:09:48.459Z - success: tester loaded
-2016-06-24T02:09:48.463Z - success: ui-tree loaded
-2016-06-24T02:09:48.491Z - normal: Initializing project /Users/lianghangbing/CocosJsProj/BasketBall
-2016-06-24T02:09:48.492Z - normal: Loading packages
-2016-06-24T02:09:48.497Z - normal: Run Application
-2016-06-24T02:09:48.910Z - success: preview server running at http://localhost:7456
-2016-06-24T02:09:52.162Z - normal: 1.1.1
-2016-06-24T02:14:12.155Z - normal: Compiled successfully
-2016-06-24T02:14:32.166Z - normal: Compiled successfully
-2016-06-24T02:17:12.035Z - normal: Compiled successfully
-2016-06-24T02:27:39.987Z - normal: Compiled successfully
-2016-06-24T02:32:03.505Z - normal: Compiled successfully
-2016-06-24T02:33:22.071Z - normal: Compiled successfully
-2016-06-24T02:35:22.288Z - normal: Compiled successfully
-2016-06-24T02:37:12.495Z - normal: Compiled successfully
-2016-06-24T02:38:03.487Z - normal: Compiled successfully
-2016-06-24T02:38:57.801Z - normal: Compiled successfully
-2016-06-24T02:40:11.725Z - normal: Compiled successfully
-2016-06-24T02:40:47.961Z - normal: Compiled successfully
-2016-06-24T02:41:03.694Z - normal: Compiled successfully
-2016-06-24T02:41:39.561Z - normal: Compiled successfully
-2016-06-24T02:42:13.823Z - normal: Compiled successfully
-2016-06-24T03:38:13.702Z - normal: Compiled successfully
-2016-06-24T03:38:37.359Z - normal: Compiled successfully
-2016-06-24T03:38:44.926Z - normal: Compiled successfully
-2016-06-24T03:38:57.218Z - normal: Compiled successfully
-2016-06-24T03:54:31.500Z - normal: Compiled successfully
-2016-06-24T03:58:25.503Z - normal: Compiled successfully
-2016-06-24T04:02:57.649Z - normal: Compiled successfully
-2016-06-24T04:16:19.083Z - normal: Compiled successfully
-2016-06-24T04:19:25.562Z - normal: Compiled successfully
-2016-06-24T04:19:57.480Z - normal: Compiled successfully
-2016-06-24T04:20:25.282Z - normal: Compiled successfully
-2016-06-24T04:22:10.138Z - normal: Compiled successfully
-2016-06-24T05:06:21.128Z - normal: Compiled successfully
-2016-06-24T05:10:19.006Z - normal: Compiled successfully
-2016-06-24T05:16:39.784Z - normal: Compiled successfully
-2016-06-24T05:17:11.114Z - normal: Compiled successfully
-2016-06-24T05:19:28.734Z - normal: Compiled successfully
-2016-06-24T05:23:58.871Z - normal: Compiled successfully
-2016-06-24T05:26:03.788Z - normal: Compiled successfully
-2016-06-24T05:27:26.289Z - normal: Compiled successfully
-2016-06-24T05:27:52.932Z - normal: Compiled successfully
-2016-06-24T05:30:00.027Z - normal: Compiled successfully
-2016-06-24T05:37:08.884Z - normal: Compiled successfully
-2016-06-24T05:47:01.670Z - normal: Compiled successfully
-2016-06-24T05:50:25.982Z - normal: Compiled successfully
-2016-06-24T05:52:37.808Z - normal: Compiled successfully
-2016-06-24T05:53:44.713Z - normal: Compiled successfully
-2016-06-24T05:55:54.656Z - normal: Compiled successfully
-2016-06-24T06:11:21.380Z - normal: Compiled successfully
-2016-06-24T06:14:39.872Z - normal: Compiled successfully
-2016-06-24T06:14:45.221Z - normal: Compiled successfully
-2016-06-24T06:15:31.375Z - normal: Compiled successfully
-2016-06-24T06:16:11.575Z - normal: Compiled successfully
-2016-06-24T06:21:37.041Z - normal: Compiled successfully
-2016-06-24T06:22:05.736Z - normal: Compiled successfully
-2016-06-24T06:28:32.279Z - normal: Compiled successfully
-2016-06-24T06:30:09.540Z - normal: Compiled successfully
-2016-06-24T06:37:39.166Z - normal: Compiled successfully
-2016-06-24T06:39:11.338Z - normal: Compiled successfully
-2016-06-24T06:40:39.158Z - normal: Compiled successfully
-2016-06-24T06:40:52.507Z - normal: Compiled successfully
-2016-06-24T06:45:49.118Z - normal: Compiled successfully
-2016-06-24T06:46:49.258Z - normal: Compiled successfully
-2016-06-24T06:49:15.963Z - normal: Compiled successfully
-2016-06-24T06:51:16.396Z - normal: Compiled successfully
-2016-06-24T06:52:02.163Z - normal: Compiled successfully
-2016-06-24T06:52:44.817Z - normal: Compiled successfully
-2016-06-24T06:56:28.605Z - normal: Compiled successfully
-2016-06-24T07:01:12.109Z - normal: Compiled successfully
-2016-06-24T07:04:39.650Z - normal: Compiled successfully
-2016-06-24T07:10:06.462Z - normal: Compiled successfully
-2016-06-24T07:11:02.080Z - normal: Compiled successfully
-2016-06-24T07:13:17.028Z - normal: Compiled successfully
-2016-06-24T07:16:16.835Z - normal: Compiled successfully
-2016-06-24T07:17:14.976Z - normal: Compiled successfully
-2016-06-24T07:19:55.884Z - normal: Compiled successfully
-2016-06-24T07:23:48.368Z - normal: Compiled successfully
-2016-06-24T07:25:02.782Z - normal: Compiled successfully
-2016-06-24T07:28:31.622Z - normal: Compiled successfully
-2016-06-24T07:34:32.409Z - normal: Compiled successfully
-2016-06-24T07:34:59.072Z - normal: Compiled successfully
-2016-06-24T07:37:18.819Z - normal: Compiled successfully
-2016-06-24T07:38:08.487Z - normal: Compiled successfully
-2016-06-24T07:39:35.405Z - normal: Compiled successfully
-2016-06-24T07:40:09.433Z - normal: Compiled successfully
-2016-06-24T07:41:08.317Z - normal: Compiled successfully
-2016-06-24T07:50:43.058Z - normal: Compiled successfully
-2016-06-24T07:56:53.560Z - normal: Compiled successfully
-2016-06-24T08:00:02.679Z - normal: Compiled successfully
-2016-06-24T08:03:08.417Z - normal: Compiled successfully
-2016-06-24T08:03:08.698Z - error: Unknown type of Ball.listener, property should be defined in "properties" or "ctor"
-    at Object.CCClass [as Class] (/Applications/CocosCreator.app/Contents/Resources/engine/cocos2d/core/platform/CCClass.js:883:20)
-    at Object.require.Ball (assets/script/Ball.js:13)
-    at s (../../../../../../Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/browser-pack/_prelude.js:1)
-    at e (../../../../../../Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/browser-pack/_prelude.js:1)
-    at file:///Users/lianghangbing/CocosJsProj/BasketBall/library/bundle.project.js?086:1:451
-2016-06-24T08:04:02.489Z - normal: Compiled successfully
-2016-06-24T08:04:02.591Z - error: Property "Ball.listener" must define at least one of "default", "get" or "set".
-    at module.exports (/Applications/CocosCreator.app/Contents/Resources/engine/cocos2d/core/platform/preprocess-attrs.js:207:24)
-    at declareProperties (/Applications/CocosCreator.app/Contents/Resources/engine/cocos2d/core/platform/CCClass.js:646:9)
-    at Object.CCClass [as Class] (/Applications/CocosCreator.app/Contents/Resources/engine/cocos2d/core/platform/CCClass.js:838:9)
-    at Object.require.Ball (assets/script/Ball.js:13)
-    at s (../../../../../../Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/browser-pack/_prelude.js:1)
-    at e (../../../../../../Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/browser-pack/_prelude.js:1)
-    at file:///Users/lianghangbing/CocosJsProj/BasketBall/library/bundle.project.js?087:1:451
-2016-06-24T08:05:28.241Z - normal: Compiled successfully
-2016-06-24T08:07:13.635Z - normal: Compiled successfully
-2016-06-24T08:09:04.620Z - normal: Compiled successfully
-2016-06-24T08:11:21.525Z - normal: Compiled successfully
-2016-06-24T08:27:11.169Z - normal: Compiled successfully
-2016-06-24T08:29:21.350Z - normal: Compiled successfully
-2016-06-24T08:30:40.107Z - normal: Compiled successfully
-2016-06-24T08:31:24.041Z - normal: Compiled successfully
-2016-06-24T08:33:29.568Z - normal: Compiled successfully
-2016-06-24T08:38:49.844Z - normal: Compiled successfully
-2016-06-24T08:41:47.352Z - normal: Compiled successfully
-2016-06-24T08:46:30.390Z - normal: Compiled successfully
-2016-06-24T08:46:47.423Z - normal: Compiled successfully
-2016-06-24T08:46:56.330Z - normal: Compiled successfully
-2016-06-24T08:56:09.299Z - normal: Compiled successfully
-2016-06-24T08:56:15.131Z - normal: Compiled successfully
-2016-06-24T08:56:58.914Z - normal: Compiled successfully
-2016-06-24T08:59:44.980Z - normal: Compiled successfully
-2016-06-24T09:00:02.600Z - normal: Compiled successfully
-2016-06-24T09:00:26.277Z - normal: Compiled successfully
+2016-06-24T09:12:57.966Z - normal: Load ~/.CocosCreator/settings.json
+2016-06-24T09:12:57.973Z - normal: checking language setting...
+2016-06-24T09:12:57.973Z - normal: Language: zh
+2016-06-24T09:12:58.003Z - success: protocol editor-framework registerred
+2016-06-24T09:12:58.004Z - success: protocol app registerred
+2016-06-24T09:12:58.004Z - success: protocol packages registerred
+2016-06-24T09:12:58.004Z - success: protocol unpack registerred
+2016-06-24T09:12:58.127Z - normal: connected!
+2016-06-24T09:12:58.130Z - normal: Check project /Users/lianghangbing/CocosJsProj/BasketBall
+2016-06-24T09:12:58.135Z - normal: Initializing Cocos Creator Editor
+2016-06-24T09:12:58.358Z - normal: Initializing Cocos2d
+2016-06-24T09:12:58.502Z - normal: Initializing Asset Database
+2016-06-24T09:12:58.523Z - success: protocol uuid registerred
+2016-06-24T09:12:58.523Z - success: protocol uuid registerred
+2016-06-24T09:12:58.523Z - success: protocol thumbnail registerred
+2016-06-24T09:12:58.524Z - normal: Loading editor/builtin packages
+2016-06-24T09:12:58.637Z - success: assets loaded
+2016-06-24T09:12:58.640Z - success: builder loaded
+2016-06-24T09:12:58.646Z - success: hierarchy loaded
+2016-06-24T09:12:58.650Z - success: inspector loaded
+2016-06-24T09:12:58.651Z - success: keystore loaded
+2016-06-24T09:12:58.656Z - success: node-library loaded
+2016-06-24T09:12:58.660Z - success: preferences loaded
+2016-06-24T09:12:58.680Z - success: project-importer loaded
+2016-06-24T09:12:58.683Z - success: project-settings loaded
+2016-06-24T09:12:58.687Z - success: ui-kit loaded
+2016-06-24T09:12:58.691Z - success: ui-grid loaded
+2016-06-24T09:12:58.696Z - success: scene loaded
+2016-06-24T09:12:58.697Z - success: sprite-editor loaded
+2016-06-24T09:12:58.704Z - success: timeline loaded
+2016-06-24T09:12:58.707Z - success: ui-kit-extra loaded
+2016-06-24T09:12:58.708Z - normal: Loading builtin packages
+2016-06-24T09:12:58.712Z - success: asset-db-debugger loaded
+2016-06-24T09:12:58.714Z - success: code-editor loaded
+2016-06-24T09:12:58.714Z - success: color-picker loaded
+2016-06-24T09:12:58.718Z - success: console loaded
+2016-06-24T09:12:58.722Z - success: package-manager loaded
+2016-06-24T09:12:58.727Z - success: tester loaded
+2016-06-24T09:12:58.730Z - success: ui-tree loaded
+2016-06-24T09:12:58.757Z - normal: Initializing project /Users/lianghangbing/CocosJsProj/BasketBall
+2016-06-24T09:12:58.759Z - normal: Loading packages
+2016-06-24T09:12:58.762Z - normal: Run Application
+2016-06-24T09:12:59.906Z - success: preview server running at http://localhost:7456
+2016-06-24T09:12:59.907Z - normal: Compiling scripts...
+2016-06-24T09:13:01.728Z - normal: Compiled successfully
+2016-06-24T09:13:05.142Z - normal: 1.1.1
+2016-06-24T09:15:10.025Z - normal: Compiled successfully
+2016-06-24T09:15:58.142Z - normal: Compiled successfully
+2016-06-24T09:15:59.084Z - error: Failed to create field 05d6195d99B06zz0IIi6csv. type not the same 05d6195d99B06zz0IIi6csv:cc.Prefab
+    at editor-field.Editor.polymerElement._rebuild (app://editor/page/ui/props/field/field.js:1:1737)
+    at editor-field.<anonymous> (app://editor/page/ui/props/field/field.js:1:598)
+    at Object.Debouncer.complete (app://bower_components/polymer/polymer.html:1203:15)
+2016-06-24T09:25:28.645Z - normal: Compiled successfully
+2016-06-24T09:26:36.446Z - normal: Compiled successfully
+2016-06-24T09:37:13.539Z - normal: Compiled successfully
+2016-06-24T09:38:55.088Z - normal: Compiled successfully
+2016-06-24T09:39:19.481Z - normal: Compiled successfully
+2016-06-24T09:40:32.729Z - normal: Compiled successfully
+2016-06-24T09:40:54.164Z - normal: Compiled successfully
+2016-06-24T09:43:07.341Z - normal: Compiled successfully
+2016-06-24T09:49:17.766Z - normal: Compiled successfully
+2016-06-24T09:49:48.462Z - normal: Compiled successfully
+2016-06-24T09:51:51.688Z - normal: Compiled successfully
+2016-06-24T09:53:32.266Z - normal: Compiled successfully
+2016-06-24T09:58:10.350Z - normal: Compiled successfully
+2016-06-24T09:58:58.847Z - normal: Compiled successfully
+2016-06-24T10:00:51.984Z - normal: Compiled successfully
+2016-06-24T10:01:31.529Z - normal: Compiled successfully
+2016-06-24T10:02:41.300Z - normal: Compiled successfully
+2016-06-24T10:03:24.753Z - normal: Compiled successfully
+2016-06-24T10:04:24.869Z - normal: Compiled successfully
+2016-06-24T10:04:42.447Z - normal: Compiled successfully
+2016-06-24T10:09:54.057Z - normal: Compiled successfully
+2016-06-24T10:10:15.961Z - normal: Compiled successfully
+2016-06-24T10:10:58.204Z - normal: Compiled successfully
+2016-06-24T10:11:15.703Z - normal: Compiled successfully
+2016-06-24T10:11:35.473Z - normal: Compiled successfully
+2016-06-24T10:12:39.882Z - normal: Compiled successfully
+2016-06-24T10:15:08.699Z - normal: Compiled successfully
+2016-06-24T10:20:59.316Z - normal: Compiled successfully
+2016-06-24T10:23:33.534Z - normal: Compiled successfully
+2016-06-24T10:25:28.307Z - normal: Compiled successfully
+2016-06-24T10:26:44.882Z - normal: Compiled successfully
+2016-06-24T10:28:19.007Z - normal: Compiled successfully
+2016-06-24T10:30:08.926Z - normal: Compiled successfully
+2016-06-24T10:31:12.164Z - normal: Compiled successfully
+2016-06-24T10:33:43.187Z - normal: Compiled successfully
+2016-06-24T10:35:04.273Z - normal: Compiled successfully
+2016-06-24T10:37:18.545Z - normal: Compiled successfully
+2016-06-24T10:39:25.741Z - normal: Compiled successfully
+2016-06-24T10:50:00.831Z - normal: Compiled successfully
+2016-06-24T10:53:04.160Z - normal: Compiled successfully
+2016-06-24T10:54:59.373Z - normal: Compiled successfully
+2016-06-24T10:55:34.124Z - normal: Compiled successfully
