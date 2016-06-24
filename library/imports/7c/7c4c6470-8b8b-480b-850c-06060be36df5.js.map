@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,EAAE,CAAC,KAAK,CAAC;AACL,eAAS,EAAE,CAAC,SAAS;;AAErB,cAAU,EAAE,EACX;;AAED,WAAO,EAAE,mBAAU;AACf,eAAO,IAAI,CAAC,IAAI,CAAC,CAAC,GAAG,IAAI,CAAC,IAAI,CAAC,KAAK,GAAC,CAAC,CAAC;KAC1C;;AAED,YAAQ,EAAE,oBAAU;AAChB,eAAO,IAAI,CAAC,IAAI,CAAC,CAAC,GAAG,IAAI,CAAC,IAAI,CAAC,KAAK,GAAC,CAAC,CAAC;KAC1C;;CAEJ,CAAC,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\n    extends: cc.Component,\n\n    properties: {\n    },\n\n    getLeft: function(){\n        return this.node.x - this.node.width/2;\n    },\n\n    getRight: function(){\n        return this.node.x + this.node.width/2;\n    },\n\n});\n"
+  ]
+}

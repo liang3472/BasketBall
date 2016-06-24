@@ -1,0 +1,25 @@
+{
+  "collision-matrix": [
+    [
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      false
+    ]
+  ],
+  "group-list": [
+    "default",
+    "ball",
+    "box"
+  ],
+  "start-scene": ""
+}

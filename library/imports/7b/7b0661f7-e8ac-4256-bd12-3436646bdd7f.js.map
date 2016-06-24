@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,IAAI,IAAI,GAAG,OAAO,CAAC,MAAM,CAAC,CAAC;AAC3B,IAAI,KAAK,GAAG,OAAO,CAAC,OAAO,CAAC,CAAC;AAC7B,IAAI,MAAM,GAAG,OAAO,CAAC,QAAQ,CAAC,CAAC;;AAE/B,EAAE,CAAC,KAAK,CAAC;AACL,eAAS,EAAE,CAAC,SAAS;;AAErB,cAAU,EAAE;AACR,YAAI,EAAE,IAAI;AACV,gBAAQ,EAAE,KAAK;AACf,cAAM,EAAE,MAAM;KACjB;;AAED,UAAM,EAAE,kBAAY;AAChB,YAAI,CAAC,gBAAgB,GAAG,EAAE,CAAC,QAAQ,CAAC,mBAAmB,EAAE,CAAC;AAC1D,YAAI,CAAC,IAAI,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC;AACrB,YAAI,CAAC,QAAQ,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC;AACzB,YAAI,CAAC,MAAM,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC;;;KAG1B;;AAED,mBAAe,EAAE,yBAAS,IAAI,EAAC;AAC3B,YAAI,CAAC,gBAAgB,CAAC,OAAO,GAAG,IAAI,CAAC;KACxC;;AAED,UAAM,EAAE,gBAAU,EAAE,EAAE,EAErB;CACJ,CAAC,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "var Ball = require('Ball');\nvar flush = require('flush');\nvar Basket = require('Basket');\n\ncc.Class({\n    extends: cc.Component,\n\n    properties: {\n        ball: Ball,\n        flushBtn: flush,\n        basket: Basket\n    },\n\n    onLoad: function () {\n        this.collisionManager = cc.director.getCollisionManager();\n        this.ball.init(this);\n        this.flushBtn.init(this);\n        this.basket.init(this);\n\n        //this.collisionManager.enabledDebugDraw = true// 开启debug绘制\n    },\n\n    switchCollision: function(flag){\n        this.collisionManager.enabled = flag;\n    },\n\n    update: function (dt) {\n\n    },\n});\n"
+  ]
+}
