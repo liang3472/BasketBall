@@ -103,7 +103,8 @@
     "_enabled": true,
     "emitSpeed": 2500,
     "gravity": 4500,
-    "scale": 0.7
+    "scale": 0.7,
+    "showTime": 0.3
   },
   {
     "__type__": "cc.CircleCollider",

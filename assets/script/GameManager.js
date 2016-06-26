@@ -1,22 +1,24 @@
-var flush = require('flush');
 var Basket = require('Basket');
 var Ball = require('Ball');
+var Score = require('Score');
 
 cc.Class({
     extends: cc.Component,
 
     properties: {
         ball: cc.Prefab,
-        flushBtn: flush,
         basket: Basket,
-        startPosition: cc.Vec2
+        startPosition: cc.Vec2,
+        score: Score,
     },
 
     onLoad: function () {
         this.newBall();
         this.initCollisionSys();
-        this.flushBtn.init(this);
-        //this.basket.init(this);
+        this.basket.init(this);
+        this.score.init(this);
+        
+        this.score.setScore(0);
     },
 
     // 初始化碰撞系统
@@ -30,9 +32,7 @@ cc.Class({
     newBall: function(){
         var child = null;
         if(cc.pool.hasObject(Ball)){
-            var test = cc.pool.getFromPool(Ball);
-            
-            child = cc.pool.getFromPool(Ball).getNode();
+            child = cc.pool.getFromPool(Ball).node;
         }else{
             child = cc.instantiate(this.ball);
         }
