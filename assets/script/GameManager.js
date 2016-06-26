@@ -1,6 +1,7 @@
 var Basket = require('Basket');
 var Ball = require('Ball');
 var Score = require('Score');
+var SoundManager = require('SoundManager');
 
 cc.Class({
     extends: cc.Component,
@@ -10,6 +11,7 @@ cc.Class({
         basket: Basket,
         startPosition: cc.Vec2,
         score: Score,
+        soundMng: SoundManager,
     },
 
     onLoad: function () {

@@ -31,6 +31,7 @@ cc.Class({
         this.currentVerSpeed = 0;
         this.target =  cc.p(0, 0);
         this.node.setScale(1);
+        this.hitIn = false;
     },
 
     // 显示动画
@@ -56,7 +57,8 @@ cc.Class({
                 this.currentVerSpeed = this.emitSpeed;
                 this.target =  this.node.parent.convertToNodeSpaceAR(touch.getLocation()); // 记录最后触摸点,根据触摸点偏移计算速度
                 this.currentHorSpeed = this.target.x * 1.2;
-                cc.log('x='+this.target.x+', y='+this.target.y);
+                
+                this.game.soundMng.playFlySound();
 
                 this.doAnim();
             }.bind(this),
@@ -124,6 +126,11 @@ cc.Class({
             if(ballY < validTop && ballY > validBot && ballX > validLeft && ballX < validRight){
                 this.valid = true;
                 this.game.score.addScore();
+                if(this.hitIn){
+                    this.game.soundMng.playHitBoardInSound();
+                }else{
+                    this.game.soundMng.playBallInSound();
+                }
             }
         }
     },
@@ -138,6 +145,10 @@ cc.Class({
         this._changeBallStatus(this.currentVerSpeed);
 
         if(this.ballStatus === BallStatus.NONE && this._isOutScreen()){
+            if(!this.valid){ // 没进球将分数重置
+                this.game.score.setScore(0);
+            }
+            
             this.node.stopAllActions();
             this.node.removeFromParent();
             this.valid = false;
@@ -176,6 +187,7 @@ cc.Class({
         // 篮球碰到篮筐内，改变篮球横向速度为反方向
         if((other.node.name === 'right' && this.node.x < left) || (other.node.name === 'left' && this.node.x > right)){
             this.currentHorSpeed = this.currentHorSpeed * -1 * 1.5;
+            this.hitIn = true;
         }
 
         // 篮球碰到篮筐外，增大横向速度
@@ -183,6 +195,8 @@ cc.Class({
             this.currentHorSpeed = this.currentHorSpeed * 1.5;
         }
         this.currentVerSpeed = this.currentVerSpeed * -1 * 1.2;
+        
+        this.game.soundMng.playHitBoardSound();
         
         // 碰撞系统会计算出碰撞组件在世界坐标系下的相关的值，并放到 world 这个属性里面
         var world = self.world;

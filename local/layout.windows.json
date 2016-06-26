@@ -1,10 +1,10 @@
 {
-  "version": "1.1.1",
+  "version": "1.1.0",
   "windows": {
     "main": {
-      "x": -1245,
-      "y": 303,
-      "width": 1242,
+      "x": 33,
+      "y": 23,
+      "width": 1247,
       "height": 777,
       "layout": {
         "docks": [
@@ -17,7 +17,7 @@
                   "hierarchy"
                 ],
                 "type": "panel",
-                "width": 255
+                "width": 353
               },
               {
                 "active": 0,
@@ -26,13 +26,13 @@
                   "assets"
                 ],
                 "type": "panel",
-                "width": 255
+                "width": 353
               }
             ],
             "height": 686,
             "row": false,
             "type": "dock",
-            "width": 255
+            "width": 353
           },
           {
             "docks": [
@@ -43,7 +43,7 @@
                   "scene"
                 ],
                 "type": "panel",
-                "width": 623
+                "width": 572
               },
               {
                 "active": 0,
@@ -53,13 +53,13 @@
                   "timeline"
                 ],
                 "type": "panel",
-                "width": 623
+                "width": 572
               }
             ],
             "height": 686,
             "row": false,
             "type": "dock",
-            "width": 623
+            "width": 572
           },
           {
             "active": 0,
@@ -68,19 +68,13 @@
               "inspector"
             ],
             "type": "panel",
-            "width": 352
+            "width": 310
           }
         ],
         "no-collapse": true,
         "row": true,
         "type": "dock"
       }
-    },
-    "worker": {
-      "x": 760,
-      "y": 368,
-      "width": 400,
-      "height": 300
     }
   }
 }

@@ -2,25 +2,29 @@
 cc._RFpush(module, '7b066H36KxCVr0SNDZka91/', 'GameManager');
 // script/GameManager.js
 
-var flush = require('flush');
 var Basket = require('Basket');
 var Ball = require('Ball');
+var Score = require('Score');
+var SoundManager = require('SoundManager');
 
 cc.Class({
     'extends': cc.Component,
 
     properties: {
         ball: cc.Prefab,
-        flushBtn: flush,
         basket: Basket,
-        startPosition: cc.Vec2
+        startPosition: cc.Vec2,
+        score: Score,
+        soundMng: SoundManager
     },
 
     onLoad: function onLoad() {
         this.newBall();
         this.initCollisionSys();
-        this.flushBtn.init(this);
-        //this.basket.init(this);
+        this.basket.init(this);
+        this.score.init(this);
+
+        this.score.setScore(0);
     },
 
     // 初始化碰撞系统
@@ -34,9 +38,7 @@ cc.Class({
     newBall: function newBall() {
         var child = null;
         if (cc.pool.hasObject(Ball)) {
-            var test = cc.pool.getFromPool(Ball);
-
-            child = cc.pool.getFromPool(Ball).getNode();
+            child = cc.pool.getFromPool(Ball).node;
         } else {
             child = cc.instantiate(this.ball);
         }
