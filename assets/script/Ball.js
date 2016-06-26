@@ -85,7 +85,6 @@ cc.Class({
         var rotateValue = cc.randomMinus1To1();
         var rotateAnim = cc.rotateBy(2, 360*rotateValue);
         var anim = cc.spawn(scaleAnim,rotateAnim);
-        
         this.node.runAction(anim);
     },
 
