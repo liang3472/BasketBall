@@ -6,21 +6,27 @@
 
 2.2 项目初始化后你会看到
 
-![img1](https://raw.githubusercontent.com/liang3472/BasketBall/master/screenshot/screenshot1.png =500x0)
+![Image][1]
 
 ##3 运行项目
 3.1 可以选择浏览器和模拟器运行项目
 
-![img2](https://raw.githubusercontent.com/liang3472/BasketBall/master/screenshot/screenshot5.png =200x0)
+![Image][5]
 
 3.2 点击小三角运行项目
 
-![img2](https://raw.githubusercontent.com/liang3472/BasketBall/master/screenshot/screenshot2.png =200x0)
+![Image][2]
 
 *浏览器运行*
 
-![img3](https://raw.githubusercontent.com/liang3472/BasketBall/master/screenshot/screenshot4.png =500x0)
+![Image][4]
 
 *模拟器运行*
 
-![img3](https://raw.githubusercontent.com/liang3472/BasketBall/master/screenshot/screenshot3.png =500x0)
+![Image][3]
+
+[1]: https://raw.githubusercontent.com/liang3472/BasketBall/master/screenshot/screenshot1.png
+[2]: https://raw.githubusercontent.com/liang3472/BasketBall/master/screenshot/screenshot2.png
+[3]: https://raw.githubusercontent.com/liang3472/BasketBall/master/screenshot/screenshot3.png
+[4]: https://raw.githubusercontent.com/liang3472/BasketBall/master/screenshot/screenshot4.png
+[5]: https://raw.githubusercontent.com/liang3472/BasketBall/master/screenshot/screenshot5.png
