@@ -57,7 +57,7 @@ cc.Class({
                 
                 this.currentVerSpeed = this.emitSpeed;
                 this.target =  this.node.parent.convertToNodeSpaceAR(touch.getLocation()); // 记录最后触摸点,根据触摸点偏移计算速度
-                this.currentHorSpeed = this.target.x * 1.2;
+                this.currentHorSpeed = this.target.x * 2;
                 
                 this.game.soundMng.playFlySound();
 
@@ -213,7 +213,7 @@ cc.Class({
         if((other.node.name === 'right' && this.node.x > right) || (other.node.name === 'left' && this.node.x < left)){
             this.currentHorSpeed = this.currentHorSpeed * this.ballRatio * ratioHor;
         }
-        this.currentVerSpeed = this.currentVerSpeed * -1 * this.ballRatio * ratioVer * 0.8;
+        this.currentVerSpeed = this.currentVerSpeed * -1 * ratioVer * 0.8;
         this.game.soundMng.playHitBoardSound();
 
         // 碰撞组件的 aabb 碰撞框
