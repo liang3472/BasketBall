@@ -104,7 +104,8 @@
     "emitSpeed": 2500,
     "gravity": 4500,
     "scale": 0.7,
-    "showTime": 0.3
+    "showTime": 0.3,
+    "ballRatio": 2
   },
   {
     "__type__": "cc.CircleCollider",

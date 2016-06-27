@@ -18,6 +18,7 @@ cc.Class({
         gravity: 0,     // 重力速度
         scale: 0,       // 缩放系数
         showTime: 0,    // 生成篮球显示动画时间
+        ballRatio: 0,   // 球弹力
     },
 
     init: function(game){
@@ -183,22 +184,37 @@ cc.Class({
         var left = box.getLeft();
         var right = box.getRight();
 
+        // 碰撞系统会计算出碰撞组件在世界坐标系下的相关的值，并放到 world 这个属性里面
+        var world = self.world;
+        var radius = world.radius;
+
+        // 换算物体世界坐标系坐标
+        var selfWorldPot = this.node.parent.convertToWorldSpaceAR(self.node.getPosition());
+        var otherWorldPot = this.game.basket.node.convertToWorldSpaceAR(other.node.getPosition());
+        var ratioHor = 0; // 横向弹性系数
+        var ratioVer = 0; // 纵向弹性系数
+
+        // 计算竖直偏移系数，即竖直方向弹性系数
+        ratioVer = (selfWorldPot.y - otherWorldPot.y)/radius
+        // 计算水平偏移系数，即水平方向弹性系数
+        ratioHor = Math.abs(otherWorldPot.x - selfWorldPot.x)/radius;
+
         // 篮球碰到篮筐内，改变篮球横向速度为反方向
-        if((other.node.name === 'right' && this.node.x < left) || (other.node.name === 'left' && this.node.x > right)){
-            this.currentHorSpeed = this.currentHorSpeed * -1 * 1.5;
-            this.hitIn = true;
+        if((other.node.name === 'right' && this.node.x <= left) || (other.node.name === 'left' && this.node.x >= right)){
+            if(!this.hitIn){
+                this.currentHorSpeed = this.currentHorSpeed * -1 * this.ballRatio * ratioHor;
+                this.hitIn = true;
+            }else{
+                this.currentHorSpeed = this.currentHorSpeed * this.ballRatio * ratioHor;
+            }
         }
 
         // 篮球碰到篮筐外，增大横向速度
         if((other.node.name === 'right' && this.node.x > right) || (other.node.name === 'left' && this.node.x < left)){
-            this.currentHorSpeed = this.currentHorSpeed * 1.5;
+            this.currentHorSpeed = this.currentHorSpeed * this.ballRatio * ratioHor;
         }
-        this.currentVerSpeed = this.currentVerSpeed * -1 * 1.2;
-        
+        this.currentVerSpeed = this.currentVerSpeed * -1 * this.ballRatio * ratioVer * 0.8;
         this.game.soundMng.playHitBoardSound();
-        
-        // 碰撞系统会计算出碰撞组件在世界坐标系下的相关的值，并放到 world 这个属性里面
-        var world = self.world;
 
         // 碰撞组件的 aabb 碰撞框
         var aabb = world.aabb;

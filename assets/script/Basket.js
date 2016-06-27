@@ -10,7 +10,7 @@ cc.Class({
     
     init: function (game) {
         this.game = game;
-        this._doMoveAnim();
+        //this._doMoveAnim();
         this._createMaskLine();
     },
     
