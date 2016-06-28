@@ -32,6 +32,7 @@ cc.Class({
         this.currentVerSpeed = 0;
         this.target =  cc.p(0, 0);
         this.node.setScale(1);
+        this.node.rotation = 0;
         this.hitIn = false;
     },
 
@@ -93,7 +94,7 @@ cc.Class({
     doAnim: function(){
         var scaleAnim = cc.scaleTo(1, this.scale);
         var rotateValue = cc.randomMinus1To1();
-        var rotateAnim = cc.rotateBy(2, 360*rotateValue);
+        var rotateAnim = cc.rotateBy(2, 3*360*rotateValue);
         var anim = cc.spawn(scaleAnim,rotateAnim);
         this.node.runAction(anim);
     },
@@ -208,20 +209,22 @@ cc.Class({
         ratioVer = (selfWorldPot.y - otherWorldPot.y)/radius
         // 计算水平偏移系数，即水平方向弹性系数
         ratioHor = Math.abs(otherWorldPot.x - selfWorldPot.x)/radius;
+        // 水平方向碰撞初速度
+        var horV = this.currentHorSpeed/Math.abs(this.currentHorSpeed)*150;
 
         // 篮球碰到篮筐内，改变篮球横向速度为反方向
         if((other.node.name === 'right' && this.node.x <= left) || (other.node.name === 'left' && this.node.x >= right)){
             if(!this.hitIn){
-                this.currentHorSpeed = this.currentHorSpeed * -1 * this.ballRatio * ratioHor + this.currentHorSpeed/Math.abs(this.currentHorSpeed)*100;
+                this.currentHorSpeed = this.currentHorSpeed * -1 * this.ballRatio * ratioHor + horV;
                 this.hitIn = true;
             }else{
-                this.currentHorSpeed = this.currentHorSpeed * this.ballRatio * ratioHor + this.currentHorSpeed/Math.abs(this.currentHorSpeed)*100;
+                this.currentHorSpeed = this.currentHorSpeed * this.ballRatio * ratioHor + horV;
             }
         }
 
         // 篮球碰到篮筐外，增大横向速度
         if((other.node.name === 'right' && this.node.x > right) || (other.node.name === 'left' && this.node.x < left)){
-            this.currentHorSpeed = this.currentHorSpeed * this.ballRatio * ratioHor;
+            this.currentHorSpeed = this.currentHorSpeed * this.ballRatio * ratioHor + horV;
         }
         this.currentVerSpeed = this.currentVerSpeed * -1 * ratioVer * 0.8;
         this.game.soundMng.playHitBoardSound();
