@@ -47,21 +47,30 @@ cc.Class({
         this.listener = {
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             onTouchBegan: function(touch, event) { // 触摸事件开始
+                this.began = touch.getLocation();
                 this.status = TouchStatus.BEGEN;
                 return true;
             }.bind(this),
 
             onTouchEnded: function (touch, event) { // 触摸事件结束
-                this.status = TouchStatus.ENDED;
-                this.enableInput(false);
-                
-                this.currentVerSpeed = this.emitSpeed;
-                this.target =  this.node.parent.convertToNodeSpaceAR(touch.getLocation()); // 记录最后触摸点,根据触摸点偏移计算速度
-                this.currentHorSpeed = this.target.x * 2;
-                
-                this.game.soundMng.playFlySound();
+                this.ended = touch.getLocation();
+                var distance = cc.pDistance(this.began, this.ended);
+                cc.log('distance = ' + distance);
 
-                this.doAnim();
+                if(distance > 100 && this.began.y < this.ended.y){
+                    this.status = TouchStatus.ENDED;
+                    this.enableInput(false);
+                    
+                    this.currentVerSpeed = this.emitSpeed;
+                    this.target =  this.node.parent.convertToNodeSpaceAR(this.ended); // 记录最后触摸点,根据触摸点偏移计算速度
+                    this.currentHorSpeed = this.target.x * 2;
+                    
+                    this.game.soundMng.playFlySound();
+
+                    this.doAnim();
+                }else{
+                    this.status = TouchStatus.CANCEL;
+                }
             }.bind(this),
 
             onTouchCancelled: function (touch, event) { // 触摸事件取消
@@ -126,6 +135,7 @@ cc.Class({
             if(ballY < validTop && ballY > validBot && ballX > validLeft && ballX < validRight){
                 this.valid = true;
                 this.game.score.addScore();
+                this.game.basket.playNetAnim();
                 if(this.hitIn){
                     this.game.soundMng.playHitBoardInSound();
                 }else{

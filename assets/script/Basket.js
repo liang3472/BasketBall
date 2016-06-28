@@ -10,7 +10,7 @@ cc.Class({
     
     init: function (game) {
         this.game = game;
-        //this._doMoveAnim();
+        this._doMoveAnim();
         this._createMaskLine();
     },
     
@@ -23,6 +23,9 @@ cc.Class({
     },
     
     update: function (dt) {
+        if(this.line){
+
+        }
         // 修改遮罩位置，先进行坐标转换        
         var worldPot = this.node.convertToWorldSpaceAR(this.line.getPosition());
         var nodePot = this.node.parent.convertToNodeSpaceAR(worldPot);
@@ -41,6 +44,18 @@ cc.Class({
             this.linePreNode.setLocalZOrder(100);
         }else{
             this.linePreNode.setLocalZOrder(0);
+        }
+    },
+
+    // 球网动画
+    playNetAnim: function(){
+        if(this.linePreNode){
+            var scaleLong = cc.scaleTo(0.1, 1, 1.1);
+            var scaleShort = cc.scaleTo(0.3, 1, 0.9);
+            var scaleNomal = cc.scaleTo(0.2, 1, 1);
+
+            var anim = cc.sequence(scaleLong,scaleShort,scaleNomal);
+            this.linePreNode.getChildByName('net').runAction(anim);
         }
     },
 });
