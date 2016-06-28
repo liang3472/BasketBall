@@ -28,6 +28,8 @@ cc.Class({
         this.collisionManager = cc.director.getCollisionManager();
         this.collisionManager.enabled = true;
         //this.collisionManager.enabledDebugDraw = true// 开启debug绘制
+
+        cc.director.setDisplayStats(true);
     },
 
     // 生成篮球

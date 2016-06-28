@@ -76,7 +76,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "28af8cbc-5639-4a34-b437-3c861ecd7007"
+      "__uuid__": "bfa449a3-eff4-4731-b7f6-45f77aad0e8a"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -101,7 +101,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "emitSpeed": 2500,
+    "emitSpeed": 3000,
     "gravity": 4500,
     "scale": 0.7,
     "showTime": 0.3,

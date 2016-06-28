@@ -212,10 +212,10 @@ cc.Class({
         // 篮球碰到篮筐内，改变篮球横向速度为反方向
         if((other.node.name === 'right' && this.node.x <= left) || (other.node.name === 'left' && this.node.x >= right)){
             if(!this.hitIn){
-                this.currentHorSpeed = this.currentHorSpeed * -1 * this.ballRatio * ratioHor;
+                this.currentHorSpeed = this.currentHorSpeed * -1 * this.ballRatio * ratioHor + this.currentHorSpeed/Math.abs(this.currentHorSpeed)*100;
                 this.hitIn = true;
             }else{
-                this.currentHorSpeed = this.currentHorSpeed * this.ballRatio * ratioHor;
+                this.currentHorSpeed = this.currentHorSpeed * this.ballRatio * ratioHor + this.currentHorSpeed/Math.abs(this.currentHorSpeed)*100;
             }
         }
 
