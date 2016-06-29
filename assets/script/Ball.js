@@ -56,7 +56,6 @@ cc.Class({
             onTouchEnded: function (touch, event) { // 触摸事件结束
                 this.ended = touch.getLocation();
                 var distance = cc.pDistance(this.began, this.ended);
-                cc.log('distance = ' + distance);
 
                 if(distance > 100 && this.began.y < this.ended.y){
                     this.status = TouchStatus.ENDED;
@@ -69,6 +68,10 @@ cc.Class({
                     this.game.soundMng.playFlySound();
 
                     this.doAnim();
+                    this.game.newBall();
+                    if(this.shadow){
+                        this.shadow.dimiss();
+                    }
                 }else{
                     this.status = TouchStatus.CANCEL;
                 }
@@ -146,6 +149,11 @@ cc.Class({
         }
     },
 
+    // 篮球绑定自己的影子
+    bindShadow: function(shadow){
+        this.shadow = shadow;
+    },
+
     // 更新篮球位置
     _updatePosition: function(dt){
         this.node.x += dt * this.currentHorSpeed;
@@ -156,15 +164,15 @@ cc.Class({
         this._changeBallStatus(this.currentVerSpeed);
 
         if(this.ballStatus === BallStatus.NONE && this._isOutScreen()){
-            if(!this.valid){ // 没进球将分数重置
-                this.game.score.setScore(0);
-            }
+            // if(!this.valid){ // 没进球将分数重置
+            //     this.game.score.setScore(0);
+            // }
             
             this.node.stopAllActions();
             this.node.removeFromParent();
             this.valid = false;
             cc.pool.putInPool(this);
-            this.game.newBall();
+            // this.game.newBall();
             return;
         }
     },

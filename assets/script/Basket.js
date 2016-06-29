@@ -6,12 +6,26 @@ cc.Class({
         left: cc.Node,
         right: cc.Node,
         linePre: cc.Prefab,
+        count: cc.Label,
     },
     
     init: function (game) {
         this.game = game;
-        this._doMoveAnim();
+        //this._doMoveAnim();
         this._createMaskLine();
+    },
+
+    startMove: function(){
+        this._doMoveAnim();
+    },
+
+    stopMove: function(){
+        this.node.stopAllActions();
+        this._resetPosition();
+    },
+
+    _resetPosition: function(){
+        this.node.setPositionX(0);
     },
     
     // 篮筐移动动画

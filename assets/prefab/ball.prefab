@@ -29,8 +29,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 150
+      "width": 195,
+      "height": 195
     },
     "_children": [],
     "_rotationX": 0,
@@ -103,7 +103,7 @@
     "_enabled": true,
     "emitSpeed": 3000,
     "gravity": 4500,
-    "scale": 0.7,
+    "scale": 0.6,
     "showTime": 0.3,
     "ballRatio": 2
   },
@@ -121,7 +121,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 75
+    "_radius": 96
   },
   {
     "__type__": "cc.PrefabInfo",
