@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "time",
+    "texture": "a757c0c7-f41f-4544-8e79-76ba5c320a88",
+    "atlas": "",
+    "rect": [
+      55,
+      54,
+      207,
+      88
+    ],
+    "offset": [
+      -3.5,
+      4.5
+    ],
+    "originalSize": [
+      324,
+      205
+    ]
+  }
+}
