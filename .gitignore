@@ -1,7 +1,6 @@
 /.idea
 *.iml
 .DS_Store
-/library
 /local
 /temp
 /packages
