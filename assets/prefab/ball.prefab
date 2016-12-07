@@ -48,7 +48,6 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
     "_id": "",
     "_active": true,
     "_components": [
@@ -105,7 +104,7 @@
     "gravity": 4500,
     "scale": 0.6,
     "showTime": 0.3,
-    "ballRatio": 2
+    "maxXSpeed": 500
   },
   {
     "__type__": "cc.CircleCollider",
@@ -131,6 +130,7 @@
     "asset": {
       "__uuid__": "1a0c6b8f-0e87-458b-b3b5-1883407bd152"
     },
-    "fileId": "9df02yQlrFBL65ge/kFKklV"
+    "fileId": "9df02yQlrFBL65ge/kFKklV",
+    "sync": false
   }
 ]

@@ -18,7 +18,7 @@ cc.Class({
         gravity: 0,     // 重力速度
         scale: 0,       // 缩放系数
         showTime: 0,    // 生成篮球显示动画时间
-        ballRatio: 0,   // 球弹力
+        maxXSpeed: 0,   // 球弹力
     },
 
     init: function(game){
@@ -210,31 +210,29 @@ cc.Class({
         // 换算物体世界坐标系坐标
         var selfWorldPot = this.node.parent.convertToWorldSpaceAR(self.node.getPosition());
         var otherWorldPot = this.game.basket.node.convertToWorldSpaceAR(other.node.getPosition());
-        var ratioHor = 0; // 横向弹性系数
-        var ratioVer = 0; // 纵向弹性系数
 
-        // 计算竖直偏移系数，即竖直方向弹性系数
-        ratioVer = (selfWorldPot.y - otherWorldPot.y)/radius
-        // 计算水平偏移系数，即水平方向弹性系数
-        ratioHor = Math.abs(otherWorldPot.x - selfWorldPot.x)/radius;
-        // 水平方向碰撞初速度
-        var horV = this.currentHorSpeed/Math.abs(this.currentHorSpeed)*150;
+        // 将碰撞范围抽象成篮筐左右两个点，并将这两点与篮球放到同一个碰撞组。
+        // 篮球中心点到刚体中心点距离除以篮球半径得到一个比值，横纵向乘以这个比值得到横纵向速度。
+        var ratioVer = (selfWorldPot.y - otherWorldPot.y) / radius;
+        var ratioHor = Math.abs(otherWorldPot.x - selfWorldPot.x) / radius;
+        // 水平方向碰撞最大初速度
+        var horV = this.currentHorSpeed / Math.abs(this.currentHorSpeed) * this.maxXSpeed;
 
         // 篮球碰到篮筐内，改变篮球横向速度为反方向
-        if((other.node.name === 'right' && this.node.x <= left) || (other.node.name === 'left' && this.node.x >= right)){
-            if(!this.hitIn){
-                this.currentHorSpeed = this.currentHorSpeed * -1 * this.ballRatio * ratioHor + horV;
+        if ((other.node.name === 'right' && this.node.x <= left) || (other.node.name === 'left' && this.node.x >= right)) {
+            if (!this.hitIn) {
+                this.currentHorSpeed = horV * -1 * ratioHor;
                 this.hitIn = true;
-            }else{
-                this.currentHorSpeed = this.currentHorSpeed * this.ballRatio * ratioHor + horV;
+            } else {
+                this.currentHorSpeed = horV * ratioHor;
             }
         }
 
         // 篮球碰到篮筐外，增大横向速度
-        if((other.node.name === 'right' && this.node.x > right) || (other.node.name === 'left' && this.node.x < left)){
-            this.currentHorSpeed = this.currentHorSpeed * this.ballRatio * ratioHor + horV;
+        if ((other.node.name === 'right' && this.node.x > right) || (other.node.name === 'left' && this.node.x < left)) {
+            this.currentHorSpeed = horV;
         }
-        this.currentVerSpeed = this.currentVerSpeed * -1 * ratioVer * 0.8;
+        this.currentVerSpeed = this.currentVerSpeed * -1 * ratioVer;
         this.game.soundMng.playHitBoardSound();
 
         // 碰撞组件的 aabb 碰撞框
